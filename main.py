@@ -1,4 +1,4 @@
-from pyscript import document
+from pyscript import document, display
 
 Solids = {
     "C": ("Carbon", 6, "12.011 u"),
@@ -32,18 +32,31 @@ states = {
 }
 
 def enter(event):
-    symbol = document.querySelector("#text1").value.strip()
 
-    name, number, mass = elements.get(symbol, ("Element is not found", state = states.get(symbol, "-")))
+    element_symbol = document.querySelector("#text1").value.strip()
+    element_symbol = element_symbol.capitalize()
 
-     document.querySelector("#details").innerHTML = f"""
-         <h2>Element Details</h2>
-         <b>Symbol:</b> {symbol or "-"}<br>
-         <b>Element:</b> {name}<br>
-         <b>Atomic Number:</b> {number}<br>
-         <b>Atomic Mass:</b> {mass}<br>
-         <b>Physical State:</b> {state}<br>
-     """
+    name, number, mass = elements.get(
+        
+        element_symbol, ("Element not found", "-", "-")
+    )
+
+    state = {
+        **dict.fromkeys(Solids, "Solid"),
+        **dict.fromkeys(Liquids, "Liquid"),
+        **dict.fromkeys(Gases, "Gas"),
+    }
+
+    state = states.get(element_symbol, "-")
+
+    document.querySelector("#details").innerHTML = f"""
+<h2>Element Details</h2>
+<b>Symbol:</b> {element_symbol or "-"}<br>
+<b>Element:</b> {name}<br>
+<b>Atomic Number:</b> {number}<br>
+<b>Atomic Mass:</b> {mass}<br>
+<b>Physical State:</b> {state}<br>
+"""
 
 
 
