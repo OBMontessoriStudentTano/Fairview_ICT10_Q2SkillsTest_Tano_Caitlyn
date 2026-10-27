@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2 Skills Test</title>
+    <link rel="stylesheet" 
+    href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" 
+    src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+</head>
+<body>
+
+    <h1>Periodic Table Information Finder (Non-metals)</h1>
+    <br>
+
+     <!--Input box for the element symbol-->
+    <input type="text" id="text1" placeholder="Enter your Element Symbol">
+    <br><br>
+
+    <!--Submit Button-->
+    <button type="button" py-click="enter">Check Details</button>
+    <br><br>
+
+     <!--Details display area-->
+    <div id="details" class="details">
+        <h2>Element Details</h2>
+    </div>
+
+    <!--Connect the webpage to the Python-->
+    <script type="py" src="./main.py"></script>
+    
+</body>
+</html>
