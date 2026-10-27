@@ -9,9 +9,114 @@
     <script type="module" 
     src="https://pyscript.net/releases/2026.7.3/core.js"></script>
 </head>
+ <style>
+
+        /* Main Webpage */
+        body {
+            font-family:'Poppins', sans-serif;
+            background-color: #008080;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 30px 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+            text-align: center;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Header */
+        .header {
+            width: 850px;
+            max-width: 90%;
+            min-height: 350px;
+            margin: auto;
+            background-color: rgba(225,228,196,0.75);
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.20);
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Main Heading */
+        h1 {
+            color: wheat;
+            margin-bottom: 5px;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        /* Input */
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 8px 0;
+            background-color: bisque;
+            border: 1px solid #7af092;
+            border-bottom: 2px solid #aab896;
+            border-radius: 0;
+            font-size: 15px;
+            color: #2a3025
+        }
+
+        /* Input border when selected */
+        input:focus {
+            outline: none;
+            border: 2px solid #6aa332
+        }
+
+        /* Submit button */
+        button {
+            margin-top: 15px;
+            padding: 12px 35px;
+            background-color: #f59fcb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+
+        /* Submit button changes color when hovered */
+        button:hover {
+            background-color: #a3325d;
+        }
+
+        /* Give the message */
+        #message {
+            margin-top: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        /* Give the ordered list of members */
+        #members {
+            text-align: left;
+            line-height: 1.8;
+            color: #301f28
+        }
+
+        /* Displays the total number of members */
+        #members p {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(37,48,31,0.25);
+        }
+
+    </style>
 <body>
 
+    <div id="header">
     <h1>Periodic Table Information Finder (Non-metals)</h1>
+    </div>
     <br>
 
      <!--Input box for the element symbol-->
