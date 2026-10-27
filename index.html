@@ -25,6 +25,7 @@
             text-align: center;
             
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
@@ -57,8 +58,8 @@
             padding: 12px;
             margin: 8px 0;
             background-color: bisque;
-            border: 1px solid #7af092;
-            border-bottom: 2px solid #aab896;
+            border: 1px solid wheat;
+            border-bottom: 2px solid whitesmoke;
             border-radius: 0;
             font-size: 15px;
             color: #2a3025
@@ -67,14 +68,14 @@
         /* Input border when selected */
         input:focus {
             outline: none;
-            border: 2px solid #6aa332
+            border: 2px solid beige
         }
 
         /* Submit button */
         button {
             margin-top: 15px;
             padding: 12px 35px;
-            background-color: #f59fcb;
+            background-color: #002147;
             color: white;
             border: none;
             border-radius: 8px;
@@ -85,30 +86,15 @@
 
         /* Submit button changes color when hovered */
         button:hover {
-            background-color: #a3325d;
+            background-color: #000080;
         }
 
-        /* Give the message */
-        #message {
+        /* Give the element detials */
+        #details {
             margin-top: 25px;
             font-size: 16px;
             font-weight: bold;
             line-height: 1.5;
-        }
-
-        /* Give the ordered list of members */
-        #members {
-            text-align: left;
-            line-height: 1.8;
-            color: #301f28
-        }
-
-        /* Displays the total number of members */
-        #members p {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 12px;
-            border-top: 1px solid rgba(37,48,31,0.25);
         }
 
     </style>
