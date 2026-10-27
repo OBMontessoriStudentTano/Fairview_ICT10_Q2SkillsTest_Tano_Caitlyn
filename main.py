@@ -7,11 +7,9 @@ Solids = {
     "Se": ("Selenium", 34, "78.96 u"),
     "I": ("Iodine", 53, "126.904 u"),
 }
-
 Liquids = {
     "Br": ("Bromine", 35, "79.904 u"),
 }
-
 Gases = {
     "H": ("Hydrogen", 1, "1.008 u"),
     "He": ("Helium", 2, "4.00 u"),
@@ -26,36 +24,24 @@ Gases = {
     "Rn": ("Radon", 86, "222 u"),
 }
 
-elements = {}
-elements.update(Solids)
-elements.update(Liquids)
-elements.update(Gases)
-
-def enter(event):
-
-
-    
-    # Get the element symbol
-    element_symbol = document.querySelector("#text1").value.strip()
-    element_symbol = element_symbol.capitalize()
-
-    result = elements.get(element_symbol, ("Element not found", "-", "-")    
-    )
-
-    name, atomic_number, atomic_mass = result
-
-    state = {
+elements = {**Solids, **Liquids, **Gases}
+states = {
         **dict.fromkeys(Solids, "Solid"),
         **dict.fromkeys(Liquids, "Liquid"),
         **dict.fromkeys(Gases, "Gas"),
-    }.get(element_symbol, "-")
+}
+
+def enter(event):
+    symbol = document.querySelector("#text1").value.strip()
+
+    name, number, mass = elements.get(symbol, ("Element is not found", state = states.get(symbol, "-")))
 
      document.querySelector("#details").innerHTML = f"""
          <h2>Element Details</h2>
-         <b>Symbol:</b> {element_symbol or "-"}<br>
+         <b>Symbol:</b> {symbol or "-"}<br>
          <b>Element:</b> {name}<br>
-         <b>Atomic Number:</b> {atomic_number}<br>
-         <b>Atomic Mass:</b> {atomic_mass}<br>
+         <b>Atomic Number:</b> {number}<br>
+         <b>Atomic Mass:</b> {mass}<br>
          <b>Physical State:</b> {state}<br>
      """
 
