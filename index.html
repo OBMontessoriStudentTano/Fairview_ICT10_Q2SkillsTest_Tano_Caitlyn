@@ -32,21 +32,21 @@
 
         /* Header */
         .header {
-            width: 850px;
-            max-width: 90%;
-            min-height: 350px;
-            margin: auto;
+            width: 1000px;
+            max-width: 95%;
+            min-height: auto;
+            margin: 0 auto;
             background-color: rgba(225,228,196,0.75);
-            padding: 45px;
-            border-radius: 20px;
+            padding: 15px 30px;
+            border-radius: 12px;
             box-shadow: 0px 5px 20px rgba(0,0,0,0.20);
             box-sizing: border-box;
             backdrop-filter: blur(5px);
         }
 
         /* Main Heading */
-        h1 {
-            color: wheat;
+        h2 {
+            color: #002147;
             margin-bottom: 5px;
             font-size: 32px;
             letter-spacing: 1px;
@@ -55,14 +55,17 @@
         /* Input */
         input {
             width: 90%;
-            padding: 12px;
-            margin: 8px 0;
+            max-width: 450px;
+            min-height: 55px;
+            padding: 15px 18px;
+            margin: 12px 0;
             background-color: bisque;
             border: 1px solid wheat;
             border-bottom: 2px solid whitesmoke;
-            border-radius: 0;
-            font-size: 15px;
-            color: #2a3025
+            border-radius: 8px;
+            font-size: 16px;
+            color: #25302d;
+            box-sizing: border-box;
         }
 
         /* Input border when selected */
@@ -91,19 +94,34 @@
 
         /* Give the element detials */
         #details {
-            margin-top: 25px;
-            font-size: 16px;
-            font-weight: bold;
-            line-height: 1.5;
+            width: 90%;
+            max-width: 600px;
+            margin: 25px auto;
+            padding: 25px;
+            background-color: #b5f5b3;
+            border: 3px solid #6e916d;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: left;
+            line-height: 2;
+            box-sizing: border-box;
+        }
+
+        #details h2{
+            margin: 0 0 15px;
+            padding-bottom: 10px;
+            color: #b5f5b3;
+            text-align:center;
+            border: 2px solid #6e916d;
         }
 
     </style>
 <body>
 
-    <div id="header">
-    <h1>Periodic Table Information Finder (Non-metals)</h1>
+    <div class="header">
+    <h2>Periodic Table Information Finder (Non-metals)</h2>
     </div>
-    <br>
+    <br><br>
 
      <!--Input box for the element symbol-->
     <input type="text" id="text1" placeholder="Enter your Element Symbol">
@@ -115,7 +133,7 @@
 
      <!--Details display area-->
     <div id="details" class="details">
-        <h2>Element Details</h2>
+        <h3>Element Details</h3>
     </div>
 
     <!--Connect the webpage to the Python-->

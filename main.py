@@ -51,11 +51,11 @@ def enter(event):
 
     document.querySelector("#details").innerHTML = f"""
 <h2>Element Details</h2>
-<b>Symbol:</b> {element_symbol or "-"}<br>
-<b>Element:</b> {name}<br>
-<b>Atomic Number:</b> {number}<br>
-<b>Atomic Mass:</b> {mass}<br>
-<b>Physical State:</b> {state}<br>
+<p>Symbol:<span class="symbol">{element_symbol or "-"}</span></p>
+<p>Element:<span class="element-name">{name}</span></p>
+<p>Atomic Number:<span class="atomic-number">{number}</span></p>
+<p>Atomic Mass:<span class="atomic-mass">{mass}</p>
+<p>Physical State:<span class="physical-state">{state}</span></p>
 """
 
 
